@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Street Biker</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="bubbles"></div>
+<div id="vig"></div>
+<div id="hud" class="hidden"><div id="location">MANHATTAN</div><div id="routeName"></div><div class="big" id="time">0:00.00</div><div class="rec" id="recl">Record —</div><div class="dim" id="split"></div></div>
+<canvas id="mini" width="140" height="140" class="hidden"></canvas>
+<button id="gbtn" class="hidden">Guide: on</button>
+<button id="sbtn" class="hidden">SFX: on</button>
+<button id="vbtn" class="hidden">Voices: on</button>
+<button id="cbtn" class="hidden">Camera: rider</button>
+<div id="msg"></div>
+<div id="meter" class="hidden"><div id="torch" title="Torches: collect on the road, spent at the next busy crossing for a slow-motion look">···</div><div id="state"></div><div id="kmh">0 <small>km/h</small></div><div class="bar" id="drift"><i></i></div></div>
+<div class="touch" id="tl"><button class="tb" data-k="left" aria-label="Steer left">◀</button><button class="tb" data-k="right" aria-label="Steer right">▶</button></div>
+<div class="touch" id="tr"><button class="tb" data-k="down" aria-label="Brake">▼</button><button class="tb" data-k="up" aria-label="Gas">▲</button></div>
+
+<div class="overlay" id="menu" data-preview="park">
+<div class="menu-art"></div><div class="menu-shade"></div>
+<header class="masthead"><a class="wordmark" href="#">SB<span>®</span></a><span>NEW YORK CITY · BICYCLE TIME TRIALS</span><span class="edition">VOL. 01 / MANHATTAN</span></header>
+<div class="menu-layout"><section class="intro"><div class="eyebrow"><i></i> THE CITY IS YOUR CIRCUIT</div><h1>STREET<br><em>BIKER.</em></h1><p>Two wheels. One city.<br>Find your Manhattan.</p><div class="intro-bottom"><span>40°46′ N &nbsp; 73°58′ W</span><small>Concept art shown. Gameplay is rendered live in 3D.</small></div></section>
+<div class="garage panel"><div class="section-label">01 <span>CHOOSE YOUR RIDE</span><span class="live">4 BIKES</span></div><div class="bikes" id="bikeList"></div>
+<div class="rider-row"><span class="section-label">02 &nbsp; RIDER</span><div class="bikes" id="riderList"></div></div>
+<div class="section-label">03 <span>PICK A ROUTE & RIDE</span></div><div class="tracks" id="trackList"></div>
+<details><summary>Controls & settings <span>＋</span></summary><div class="settings"><label class="opt"><input type="checkbox" id="guideChk" checked> Racing line</label><label class="opt"><input type="checkbox" id="sfxChk" checked> City sounds</label><label class="opt"><input type="checkbox" id="voiceChk" checked> Street chatter</label></div><p class="controls"><kbd>W</kbd> / <kbd>↑</kbd> Go &nbsp; <kbd>S</kbd> / <kbd>↓</kbd> Brake<br><kbd>A</kbd> <kbd>D</kbd> / <kbd>←</kbd> <kbd>→</kbd> Steer &nbsp; <kbd>Space</kbd> Brake<br>Go + brake + steer to drift. Release brake for a boost.<br><kbd>P</kbd> Pause · <kbd>C</kbd> Camera · <kbd>R</kbd> Restart · <kbd>Esc</kbd> Garage</p></details>
+</div></div><footer class="menu-footer"><span>GO. BRAKE. FIND YOUR LINE.</span><span>v0.17 / TEXTURE PACK V1</span></footer></div>
+<div class="overlay hidden" id="results"><div class="panel">
+<h1 id="rTitle">Finish</h1>
+<div class="sub" id="rSub"></div>
+<div class="row"><span>Your time</span><b id="rTotal"></b></div>
+<div class="row"><span>Track record</span><b id="rRec"></b></div>
+<button class="btn" id="again">Race again</button><button class="btn ghost" id="toMenu">Change bike / track</button>
+</div></div>
+
+<div id="rideTools" class="hidden"><button id="pauseBtn" aria-label="Pause ride">Ⅱ</button><button id="garageBtn">Garage ↗</button><span>WASD / ARROWS &nbsp; · &nbsp; P PAUSE</span></div>
+<div id="pauseLayer" class="overlay hidden"><div class="panel pause-panel"><div class="eyebrow">TAKE A BREATHER</div><h1>PAUSED.</h1><p>The city can wait.</p><button id="resumeBtn" class="btn">Back to the ride →</button><button id="pauseGarage" class="btn ghost">Garage</button></div></div>
+<script src="vendor/three.r128.min.js"></script>
+<script src="src/core.js"></script>
+<script src="src/assets.js"></script>
+<script src="src/data.js"></script>
+<script src="src/textures.js"></script>
+<script src="src/track.js"></script>
+<script src="src/world.js"></script>
+<script src="src/models.js"></script>
+<script src="src/traffic.js"></script>
+<script src="src/audio.js"></script>
+<script src="src/chatter.js"></script>
+<script src="src/render.js"></script>
+<script src="src/game.js"></script>
+<script src="src/input.js"></script>
+<script src="src/menu.js"></script>
+<script src="src/main.js"></script>
+</body></html>
