@@ -1,7 +1,7 @@
 # Security
 
-This game is a single static HTML file. It has no server, no accounts, no
-login, no analytics and no network calls beyond loading Three.js from cdnjs.
+This game is a static site (HTML, CSS, JS, images). It has no server, no accounts, no
+login, no analytics and no network calls (Three.js is bundled in `vendor/`).
 Best times are stored in your own browser's localStorage and never leave it.
 
 There is nothing to hack on our side because there is no "our side".

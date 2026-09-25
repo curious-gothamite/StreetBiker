@@ -1,5 +1,6 @@
 # Changelog
 
+**v0.18** — Split the single 4.8 MB `index.html` into `css/`, `src/` (15 files, one per system), `assets/` (28 images, previously base64) and `vendor/` (Three.js r128). No gameplay changes. Removed the duplicate `repo/` folder and two dead, overridden functions (old `makeTrees`, old `skyDome`).
 **v0.13** — Wider gold-chevron paths and curb strip in the park. Manhattan skyline backdrop ring.
 **v0.12** — Target-frame aesthetics: night lamps with road streaks, lit storefronts, barricades, "BUS ONLY" lane text, taillight smears; park low sun with long shadows, sun glare, San Remo towers, gold curbs; glowing guide line; speed vignette.
 **v0.11** — 5th Ave: stainless food carts with vendors on corners (replaces parked food trucks); pedestrians in long coats with totes and long hair.

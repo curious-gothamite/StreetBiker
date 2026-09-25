@@ -2,8 +2,8 @@
 
 The **code** in this repository is MIT (see `LICENSE`). The **media** is not.
 
-All images embedded in `index.html` (textures, bike and rider pictures, decals,
-sky, skyline) and everything under `assets/` and `reference/` are:
+All images (textures, bike and rider pictures, decals, sky, skyline, menu art)
+and everything under `assets/` and `reference/` are:
 
 **Copyright © 2026 the Street Biker project. All rights reserved.**
 
