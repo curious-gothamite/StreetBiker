@@ -1,5 +1,0 @@
-// Street Biker: Paths to every image the game loads. Files live in assets/.
-'use strict';
-const ASSETS={"asphaltLight": "assets/textures/asphaltLight.jpg", "asphaltDark": "assets/textures/asphaltDark.jpg", "concrete": "assets/textures/concrete.jpg", "grass": "assets/textures/grass.jpg", "water": "assets/textures/water.jpg", "limestone": "assets/textures/limestone.jpg", "brick": "assets/textures/brick.jpg", "glass": "assets/textures/glass.jpg", "crosswalk": "assets/textures/crosswalk.jpg", "bark": "assets/textures/bark.jpg", "busLane": "assets/textures/busLane.jpg", "sky": "assets/textures/sky.jpg", "busSide": "assets/textures/busSide.jpg", "canopy": "assets/textures/canopy.png", "fence": "assets/textures/fence.png", "skyline": "assets/textures/skyline.png", "ashlar": "assets/textures/ashlar.jpg", "limestoneE": "assets/textures/limestoneE.jpg", "brickE": "assets/textures/brickE.jpg"};
-const BIKE_IMG={"red": "assets/bikes/red.png", "citi": "assets/bikes/citi.png", "fixie": "assets/bikes/fixie.png", "lime": "assets/bikes/lime.png"};
-const RIDER_IMG={"joe": "assets/riders/joe.png", "susie": "assets/riders/susie.png"};
